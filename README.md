@@ -1,9 +1,13 @@
 1. Prezentacja danych
+
     - lista grup
+        
         GET params: ()
+        
         endpoint path: /group
 
         response:
+        ```
         [{
             name: 'Nazwa grupy',
             id: 'UUID',
@@ -17,12 +21,16 @@
                 }
             ]
         }]
+        ```
 
     - plan:
+        
         GET params: (id: 'string', type: [ 'teacher' || 'group'])
+        
         endpoint path = /schedule/:id/:type
         
         response: 
+        ```
         {
             name: 'Nazwa grupy || nauczyciela'
             schedule: [
@@ -58,102 +66,120 @@
                 }
             ]
         }
+        ```
 
 
 2. Edytor
     - komendy
+
         enpoint path: /command
 
-        POST params: {
+        POST params: 
+        ```
+        {
             type: [ 'add_study_plan' || 'add_classroom' || 'add_teacher' || 'select_start' ]
             data: {
 
             }
         }
+        ```
 
-        type: 'add_study_plan':
+        - type: 'add_study_plan':
 
-        dodajemy kierunek 
-        dodajemy semestr
-        dodajemy grupę
-        dodajemy przedmiotu (czas trwania i typ) - wybór prowadzącego
+          1. dodajemy kierunek 
+          2. dodajemy semestr
+          3. dodajemy grupę
+          4. dodajemy przedmioty (czas trwania i typ) - wybór prowadzącego
 
-        POST
-        data: {
-            major: 'Nazwa kierunku',
-            semesters: [
-                subjects: [
-                    {
-                        name,
-                        teacher_id,
-                        duration : int (ilość bloków - blok trwa 15 min)
-                        type: [ 'lecture' || 'laboratories' || 'excercise' ]
-                    }
-                ]
-            ]
-        }
+          POST
+          ```
+          data: {
+              major: 'Nazwa kierunku',
+              semesters: [
+                  subjects: [
+                      {
+                          name,
+                          teacher_id,
+                          duration : int (ilość bloków - blok trwa 15 min)
+                          type: [ 'lecture' || 'laboratories' || 'excercise' ]
+                      }
+                  ]
+              ]
+          }
+          ```
 
-
-
-        type: 'add_classroom'
+        - type: 'add_classroom'
         
-        POST
-        data: {
-            number
-        }
+          POST
+          ```
+          data: {
+              number
+          }
+          ```
 
 
+        - type: 'add_teacher'
 
-        type: 'add_teacher'
+          POST
+          ```
+          data: {
+              name,
+              degree // Wybrany z listy (endpoint /degree)
+          }
+          ```
 
-        POST
-        data: {
-            name,
-            degree // Wybrany z listy (endpoint /degree)
-        }
 
+        - type: 'select_start'
 
-        type: 'select_start'
-
-        POST
-        data: {
-            id, // id zajęć
-            day : int (0 - 6)
-            startsAt
-        }
+          POST
+          ```
+          data: {
+              id, // id zajęć
+              day : int (0 - 6)
+              startsAt
+          }
+          ```
 
 
     - nauczyciele
         endpoint path: /teacher 
         
-        GET ()
+        GET
 
-        response: [
+        response: 
+        ```
+        [
             {
                 name,
                 id
             }
         ]
+        ```
 
     - stopnie naukowe
         endpoint path: /degree 
 
-        GET ()
+        GET
 
         response:
+        ```
         [
             'dr',
             'dr hab.' itd.
         ]
+        ```
 
 3. Układanie planu
-    - zapytanie do endpoint'u plan
+    
+    zapytanie do endpoint'u plan
 
     /time-suggestion/:classes_id
 
     GET
 
-    response: [
+    response: 
+    ```
+    [
         [ // poniedziałek
             {
                 startsAt
@@ -163,3 +189,4 @@
 
         ]
     ]
+    ```
