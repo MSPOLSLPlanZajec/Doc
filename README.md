@@ -113,6 +113,8 @@
           POST
           ```
           data: {
+              id,
+              department,
               number
           }
           ```
@@ -123,8 +125,32 @@
           POST
           ```
           data: {
+              id,
               name,
-              degree // Wybrany z listy (endpoint /degree)
+              surname,
+              titles // Wybrany z listy (endpoint /degree)
+          }
+          ```
+
+
+        - type: 'add_department'
+
+          POST
+          ```
+          data: {
+              id,
+              name
+          }
+          ```
+
+
+        - type: 'add_faculty'
+
+          POST
+          ```
+          data: {
+              id,
+              name
           }
           ```
 
