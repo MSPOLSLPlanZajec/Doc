@@ -174,7 +174,8 @@
           ```
           data: {
               name,
-              degree // Wybrany z listy (endpoint /degree)
+	      surname,
+              title // Wybrany z listy (endpoint /degree)
           }
           ```
           Response
@@ -219,7 +220,7 @@
                 id: '',
                 name: '',
                 surname: '',
-                degree: ''                
+                title: ''                
             }
         ]
         ```
