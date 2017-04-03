@@ -104,62 +104,102 @@
                           type: [ 'lecture' || 'laboratories' || 'excercise' ]
                       }
                   ]
+                  subgroups: [
+                  {
+			          name: '',
+                	  subjects: [
+                    	  {
+                              name,
+                      	      teacher_id,
+                    	      duration : int (ilość bloków - blok trwa 15 min)
+                              type: [ 'lecture' || 'laboratories' || 'excercise' ]  
+                    	  }]
+			           subgroups: [{}] //And so on...
+                   }
               ]
           }
           ```
+          Response
+          ```
+          {
+              id: "",
+              major: 'Nazwa kierunku',
+              semesters: [
+                  id: "",
+                  subjects: [
+                      {
+                          name,
+                          teacher_id,
+                          duration : int (ilość bloków - blok trwa 15 min)
+                          type: [ 'lecture' || 'laboratories' || 'excercise' ]
+                      }
+                  ]
+                  subgroups: [
+                  {
+                      id: "",
+			          name: '',
+                	  subjects: [
+                    	  {
+                              name,
+                      	      teacher_id,
+                    	      duration : int (ilość bloków - blok trwa 15 min)
+                              type: [ 'lecture' || 'laboratories' || 'excercise' ]  
+                    	  }]
+			           subgroups: [{}] //And so on...
+                   }
+              ]
+          }
+          ```
+          
 
         - type: 'add_classroom'
         
           POST
           ```
           data: {
-              id,
-              department,
               number
           }
           ```
-
-
+          Response
+          ```
+          {
+              name: '',
+              id: '',
+          }          
+          ```
+          
         - type: 'add_teacher'
 
           POST
           ```
           data: {
-              id,
               name,
-              surname,
-              titles // Wybrany z listy (endpoint /degree)
+              degree // Wybrany z listy (endpoint /degree)
           }
           ```
-
-
-        - type: 'add_department'
-
-          POST
+          Response
           ```
-          data: {
-              id,
-              name
-          }
+          {
+              id: '',
+              name: '',
+              surname: '',
+              title: ''
+          }          
           ```
-
-
-        - type: 'add_faculty'
-
-          POST
-          ```
-          data: {
-              id,
-              name
-          }
-          ```
-
 
         - type: 'select_start'
 
           POST
           ```
           data: {
+              id, // id zajęć
+              day : int (0 - 6)
+              startsAt
+          }
+          ```
+          Response
+           ```
+          {
               id, // id zajęć
               day : int (0 - 6)
               startsAt
@@ -176,8 +216,10 @@
         ```
         [
             {
-                name,
-                id
+                id: '',
+                name: '',
+                surname: '',
+                degree: ''                
             }
         ]
         ```
