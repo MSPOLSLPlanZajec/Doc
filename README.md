@@ -65,8 +65,11 @@ module.exports = function ($stateProvider, $locationProvider, $urlRouterProvider
 ### 1. Prezentacja danych
 
 - lista grup
+
     GET params: ()
+
     endpoint path: /group
+    
     response:
     ```javascript
     [{
@@ -85,8 +88,11 @@ module.exports = function ($stateProvider, $locationProvider, $urlRouterProvider
     ```
 
 - plan:
+
     GET params: (id: 'string', type: [ 'teacher' || 'group'])
+
     endpoint path = /schedule/:id/:type
+
     response: 
     ```javascript
     {
@@ -129,8 +135,11 @@ module.exports = function ($stateProvider, $locationProvider, $urlRouterProvider
 
 ### 2. Edytor
 - komendy
+
     enpoint path: /command
+
     POST params: 
+
     ```javascript
     {
         type: [ 'add_study_plan' || 'add_classroom' || 'add_teacher' || 'select_start' ]
