@@ -70,7 +70,9 @@ module.exports = function ($stateProvider, $locationProvider, $urlRouterProvider
 
 ### Wybrana technologia
 
-Wybraną przez nas technologią dla tej części aplikacji jest **.NET** z użyciem frameworka sieciowego **Web API 2**.
+Baza danych zarządzana jest systemem **MySQL** firmy **Oracle**.
+
+Wybraną przez nas technologią dla tej części aplikacji jest **.NET** z użyciem frameworka sieciowego **Web API 2** oraz konektora **MySQL** dla tejże technologii.
 Wybraliśmy tą technologię ponieważ umożliwia ona proste tworzenie sieciowego api opartego o komunikację **REST**-ową.
 
 ### Informacje użytkowe o wybranej technologii
