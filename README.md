@@ -1,5 +1,12 @@
 # Plan zajęć
 
+## Wymagania systemu
+
+* Procesor: 2 GHz 2 rdzenie lub więcej
+* Pamięć RAM: 2 GB lub więcej
+* Windows Server 2008 lub wyżej
+* Połączenie z siecią internet
+
 ## Opis systemu
 
 ### Front - end
@@ -63,12 +70,12 @@ module.exports = function ($stateProvider, $locationProvider, $urlRouterProvider
 
 ### Wybrana technologia
 
-Wybraną przez nas technologią dla tej części aplikacji jest .NET z użyciem frameworka sieciowego Web API 2.
-Wybraliśmy tą technologię ponieważ umożliwia ona proste tworzenie sieciowego api opartego o komunikację REST-ową.
+Wybraną przez nas technologią dla tej części aplikacji jest **.NET** z użyciem frameworka sieciowego **Web API 2**.
+Wybraliśmy tą technologię ponieważ umożliwia ona proste tworzenie sieciowego api opartego o komunikację **REST**-ową.
 
 ### Informacje użytkowe o wybranej technologii
 
-Wybrany przez nas framework umożliwia nam szybkie tworzenie REST-owych endpointów do komunikacji z częścią front-endową. 
+Wybrany przez nas framework umożliwia nam szybkie tworzenie **REST**-owych endpointów do komunikacji z częścią front-endową. 
 Proces tworzenia składa się z dwóch etapów
 * Konfiguracji routingu
 * Tworzenia controllerów
@@ -98,21 +105,21 @@ Tworzymy trzy rodzaje ścieżek dostępowych:
 * {controller}/{id}
 * {controller}
 
-{controller} jest pewnego rodzaju "zastępstwem" dzięki któremu mimo posiadania wielu contollerów pod tym samym routingiem aplikacja sama dopasuje odpowiedni end-point dzięki nazwie podanego controllera. Pola {id} i {typeOfSchedule} są już nazwami parametrów controllerów. Muszą one być identyczne jak nazwy parametrów. Dlatego kontrolerowi z metodą GET w formie:
+{controller} jest pewnego rodzaju "zastępstwem" dzięki któremu mimo posiadania wielu contollerów pod tym samym routingiem aplikacja sama dopasuje odpowiedni end-point dzięki nazwie podanego controllera. Pola {id} i {typeOfSchedule} są już nazwami parametrów controllerów. Muszą one być identyczne jak nazwy parametrów. Dlatego kontrolerowi z metodą **GET** w formie:
 ```csharp
 public BaseSchedule GetSchedule(string id, string typeOfSchedule){...}
 ```
 będzie odpowiadać routing {controller}/{id}/{typeOfSchedule}.
 
-Dodatkowo ustaliliśmy sposób komunikacji przy użyciu JSON'a, dlatego należało ustawić 
+Dodatkowo ustaliliśmy sposób komunikacji przy użyciu **JSON**'a, dlatego należało ustawić 
 ```csharp
 config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
 ```
-w konfiguracji WebApi.
+w konfiguracji **WebApi**.
 
 #### Tworzenia controllerów
 
-Controllery są obiektami odpowiadającymi za obsługę żądań wysyłanych na end-pointy. Dziedziczą one po klasie ApiController. Umożliwia im to odpowiadanie na zapytania GET, POST, UPDATE i DELETE. Dzięki WebAPI 2 każdy end-point automatycznie konwertuje odpowiedź na formę JSON-ową. Tak samo dzieje się z bardziej złożonymi klasami jako argumenty. Jedyny problem napotkaliśmy przy end-point'cie /command. Aby obsługiwać wiele rodzajów zapytań na nim postanowiliśmy tworzyć odpowiednią klasę na podstawie parametru type a treść zapytania przekazywać jako zwykłego stringa. Jednakże dzięki wbudowanym parserom JSON bez większych problemów byliśmy w stanie przekształcać dane JSON'owe w obiekty i vice versa. 
+Controllery są obiektami odpowiadającymi za obsługę żądań wysyłanych na end-pointy. Dziedziczą one po klasie ApiController. Umożliwia im to odpowiadanie na zapytania **GET**, **POST**, **UPDATE** i **DELETE**. Dzięki **WebAPI 2** każdy end-point automatycznie konwertuje odpowiedź na formę **JSON**-ową. Tak samo dzieje się z bardziej złożonymi klasami jako argumenty. Jedyny problem napotkaliśmy przy end-point'cie /command. Aby obsługiwać wiele rodzajów zapytań na nim postanowiliśmy tworzyć odpowiednią klasę na podstawie parametru type a treść zapytania przekazywać jako zwykłego stringa. Jednakże dzięki wbudowanym parserom **JSON** bez większych problemów byliśmy w stanie przekształcać dane **JSON**'owe w obiekty i vice versa. 
 
 
 ## Opis odpytywanych danych
