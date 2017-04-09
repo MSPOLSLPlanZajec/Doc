@@ -377,3 +377,14 @@ Controllery są obiektami odpowiadającymi za obsługę żądań wysyłanych na 
         ]
     ]
     ```
+
+## Podział pracy
+### Front-end
+* Tomasz Pierzchała
+* Wilhelm Olejnik
+* Michał Muskała
+### Back-end
+* Kamil Rutkowski
+* Michał Wolszleger
+### Baza danych
+* Jakub Rup
