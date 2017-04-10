@@ -123,7 +123,30 @@ w konfiguracji **WebApi**.
 
 Controllery są obiektami odpowiadającymi za obsługę żądań wysyłanych na end-pointy. Dziedziczą one po klasie ApiController. Umożliwia im to odpowiadanie na zapytania **GET**, **POST**, **UPDATE** i **DELETE**. Dzięki **WebAPI 2** każdy end-point automatycznie konwertuje odpowiedź na formę **JSON**-ową. Tak samo dzieje się z bardziej złożonymi klasami jako argumenty. Jedyny problem napotkaliśmy przy end-point'cie /command. Aby obsługiwać wiele rodzajów zapytań na nim postanowiliśmy tworzyć odpowiednią klasę na podstawie parametru type a treść zapytania przekazywać jako zwykłego stringa. Jednakże dzięki wbudowanym parserom **JSON** bez większych problemów byliśmy w stanie przekształcać dane **JSON**'owe w obiekty i vice versa. 
 
+### Baza danych
 
+#### Diagram związków encji
+
+![Diagram związków encji](ERD.png)
+
+#### Model relacyjny
+
+![Diagram związków encji](diagram.png)
+
+#### Opis
+Zaprojektowana baza danych składa się z 12 tabel:
+* tabela **subjects** - przechowuje informacje o przedmiotach
+* tabela **teaching** - przechowuje informacje o 
+* tabela **titles** - przechowuje informacje o tytułach i stopniach naukowych
+* tabela **teachers** - przechowuje informacje o prowadzących zajęcia
+* tabela **days** - przechowuje informacje o dniach tygodnia
+* tabela **lessons** - przechowuje informacje o zajęciach
+* tabela **classrooms** - przechowuje informacje o salach, w których są prowadzone zajęcia
+* tabela **croom type** - przechowuje informacje o typach sal, w których są prowadzone zajęcia
+* tabela **department** - przechowuje informacje o
+* tabela **faculty** - przechowuje informacje o wydziałach
+* tabela **semesters** - przechowuje informacje o semestrach
+* tabela **groups** - przechowuje informacje o grupach studenckich
 ## Opis odpytywanych danych
 
 ### 1. Prezentacja danych
