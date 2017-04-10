@@ -136,17 +136,18 @@ Controllery są obiektami odpowiadającymi za obsługę żądań wysyłanych na 
 #### Opis
 Zaprojektowana baza danych składa się z 12 tabel:
 * tabela **subjects** - przechowuje informacje o przedmiotach
-* tabela **teaching** - przechowuje informacje o 
+* tabela **teaching** - przechowuje informacje o tym jakich przedmiotów może uczyć dany nauczyciel 
 * tabela **titles** - przechowuje informacje o tytułach i stopniach naukowych
 * tabela **teachers** - przechowuje informacje o prowadzących zajęcia
 * tabela **days** - przechowuje informacje o dniach tygodnia
 * tabela **lessons** - przechowuje informacje o zajęciach
 * tabela **classrooms** - przechowuje informacje o salach, w których są prowadzone zajęcia
-* tabela **croom type** - przechowuje informacje o typach sal, w których są prowadzone zajęcia
-* tabela **department** - przechowuje informacje o
-* tabela **faculty** - przechowuje informacje o wydziałach
+* tabela **classroom type** - przechowuje informacje o typach sal, w których są prowadzone zajęcia
+* tabela **department** - przechowuje informacje o tym, na jakim wydziale znajduje się dana sala
+* tabela **faculty** - przechowuje informacje o kierunku na jakim jest dana grupa
 * tabela **semesters** - przechowuje informacje o semestrach
 * tabela **groups** - przechowuje informacje o grupach studenckich
+
 ## Opis odpytywanych danych
 
 ### 1. Prezentacja danych
