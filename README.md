@@ -2,10 +2,45 @@
 
 ## Wymagania systemu
 
+### Wymagania sprzętowe
+
 * Procesor: 2 GHz 2 rdzenie lub więcej
 * Pamięć RAM: 2 GB lub więcej
 * Windows Server 2008 lub wyżej
 * Połączenie z siecią internet
+
+### Wymagania funkcjonalne
+
+#### Użytkownicy
+
+* Uczniowie/Nauczyciele
+* Administrator
+
+#### Cel projektu
+
+Umożliwienie uczniom i nauczycielom (dalej UP) przeglądania planów dla odpowiednich grup, sal i nauczycieli. Mogą oni wyszukać plany zajęć a także prowadzących przy pomocy odpowiednich pól do wpisywania bądź z listy rozwijalnej.
+Administrator ma dostęp do panelu administracyjnego po zalogowaniu się.
+Administrator ma możliwość tworzenia, edycji i usuwania przedmiotów, planów zajęć, sal, grup oraz prowadzących. 
+Administrator ma możliwość ustawiania planu poprzez przeciąganie odpowiednich przedmiotów na plan metodą Drag-and-Drop.
+Podczas edycji planu administrator widzi wyróżnione luki w planie - gdzie dla danego przedmiotu dostępne są: sala, grupa oraz prowadzący - podczas przeciągania przedmiotu lub po jego kliknięciu.
+Dostęp do każdej z funkcjonalności ma być dostępny przez przeglądarkę internetową.
+
+#### Funkcjonalności programu (P - podstawowa, D - dodatkowa):
+
+Każdy (UP i Administrator):
+* (P) Przeglądanie planu dla danej grupy
+* (P) Podział grup na podgrupy
+* (P) Przeglądanie planu prowadzącego
+* (P) Przeglądanie planu dla sali
+* (D) Przeglądanie planu danego studenta
+* (D) Możliwość zalogowania się studenta i przejrzenie jego planu
+Administrator:
+* (P) Układanie planu dla danej grupy
+* (P) Defniowanie przedmiotu - czas trwania zajęć, prowadzący (także wielu)
+* (P) Przydział zajęć do grupy
+* (P) Definiowanie sal - pojemność, wydział
+* (D) Układanie planu dla prowadzącego
+* (D) Opcja wybrania wydziałów do poszukiwania sal przy przeszukiwaniu ich dostępności
 
 ## Opis systemu
 
