@@ -15,6 +15,10 @@ Część aplikacji działająca po stronie klienta jest wykonana w technologii *
 
 Część kliencka jest wykonana w oparciu o bibliotekę **AngularJS 1**, z routingiem obsługiwanym przez **ui-router**, a komunikacja z API poprzez **ng-resource**. Całość jest napisana w standardzie **ECMAScript 7** języka **JavaScript** i budowana przy użyciu **Webpack**.
 
+Zdecydowaliśmy się skorzystać z **AngularJS 1**, gdyż jest to sprawdzony framework do tworzenia aplikacji front-end'owych, pozwalający na łatwą kontrolę nad przepływem danych. W porównaniu ze starszymi metodami tworzenia aplikacji internetowych (np. **jQuery**), **AngularJS 1** pozwala na łatwiejsze debug'owanie kodu i wprowadza wygodną ideę **two-way data binding**, wg. której zmiana w modelu, automatycznie aktualizuje widok i vice versa.
+
+Możliwy był wybór między **AngularJS 1**, **AngularJS 2** i **ReactJS**, jednak w chwili obecnej w pełni działający pakiet **Angular Material** (zbiór komponentów UI spełniający wytyczne Material Design) jest dostępny tylko dla **AngularJS 1**.
+
 Główny plik aplikacji, w którym, korzystając z funkcjonalności **webpack'a**, budowane są komponenty i usługi oraz konfiguracja aplikacji:
 
 ```javascript
