@@ -28,13 +28,16 @@ Dostęp do każdej z funkcjonalności ma być dostępny przez przeglądarkę int
 #### Funkcjonalności programu (P - podstawowa, D - dodatkowa):
 
 Każdy (UP i Administrator):
+
 * (P) Przeglądanie planu dla danej grupy
 * (P) Podział grup na podgrupy
 * (P) Przeglądanie planu prowadzącego
 * (P) Przeglądanie planu dla sali
 * (D) Przeglądanie planu danego studenta
 * (D) Możliwość zalogowania się studenta i przejrzenie jego planu
+
 Administrator:
+
 * (P) Układanie planu dla danej grupy
 * (P) Defniowanie przedmiotu - czas trwania zajęć, prowadzący (także wielu)
 * (P) Przydział zajęć do grupy
