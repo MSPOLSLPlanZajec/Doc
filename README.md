@@ -389,7 +389,8 @@ Zaprojektowana baza danych składa się z 12 tabel:
       data: {
           id, // id zajęć
           day : int (0 - 6)
-          startsAt
+          startsAt,
+          room
       }
       ```
       response:
@@ -444,7 +445,9 @@ Zaprojektowana baza danych składa się z 12 tabel:
     [
         [ // poniedziałek
             {
-                startsAt
+                startsAt,
+                duration,
+                rooms: []
             }
         ],
         [ // wtorek
