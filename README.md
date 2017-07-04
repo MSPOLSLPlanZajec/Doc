@@ -165,6 +165,10 @@ w konfiguracji **WebApi**.
 
 Controllery są obiektami odpowiadającymi za obsługę żądań wysyłanych na end-pointy. Dziedziczą one po klasie ApiController. Umożliwia im to odpowiadanie na zapytania **GET**, **POST**, **UPDATE** i **DELETE**. Dzięki **WebAPI 2** każdy end-point automatycznie konwertuje odpowiedź na formę **JSON**-ową. Tak samo dzieje się z bardziej złożonymi klasami jako argumenty. Jedyny problem napotkaliśmy przy end-point'cie /command. Aby obsługiwać wiele rodzajów zapytań na nim postanowiliśmy tworzyć odpowiednią klasę na podstawie parametru type a treść zapytania przekazywać jako zwykłego stringa. Jednakże dzięki wbudowanym parserom **JSON** bez większych problemów byliśmy w stanie przekształcać dane **JSON**'owe w obiekty i vice versa. 
 
+#### Komunikacja między aplikacjami
+
+Aby umożliwić komunikację między obiema częściami systemu użyliśmy wbudowany w ASP.Net moduł zarządzający mechanizmem CORS. Umożliwia on aplikacjom korzystającym z zasobów umieszczonych na różnych serwerach internetowych. Bez tego mechanizmu, korzystanie z danych zasobów między różnymi aplikacjami byłoby niemożliwe.
+
 ### Baza danych
 
 #### Diagram związków encji
@@ -458,11 +462,10 @@ Zaprojektowana baza danych składa się z 12 tabel:
 
 ## Podział pracy
 ### Front-end
-* Tomasz Pierzchała
-* Wilhelm Olejnik
-* Michał Muskała
+* Tomasz Pierzchała - Komponent przydzielania zajęć i wyświetlanie planów
+* Wilhelm Olejnik - Edytor nauczycieli, klas i planów
 ### Back-end
-* Kamil Rutkowski
-* Michał Wolszleger
+* Kamil Rutkowski - Kontorlery: TimeSugestions, Groups, LessonsTypes, Degrees;
+* Michał Wolszleger - Kontrolery: Command, Classroom, Teacher, Schedule; Obsługa logowania przy pomocy tokenu, obsługa CORS
 ### Baza danych
-* Jakub Rup
+* Jakub Rup - Zarządznie bazą danych oraz połączeniem z nią przy pomocy Entity Framework.
